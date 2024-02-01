@@ -1,7 +1,9 @@
 "use client";
 
-import React from "react";
+import Image from "next/image";
+
 import { useTheme } from "@/context/ThemeProvider";
+
 import {
   Menubar,
   MenubarContent,
@@ -11,10 +13,10 @@ import {
 } from "@/components/ui/menubar";
 
 import { themes } from "@/constants";
-import Image from "next/image";
 
 const Theme = () => {
   const { mode, setMode } = useTheme();
+
   return (
     <Menubar className="relative border-none bg-transparent shadow-none">
       <MenubarMenu>
@@ -22,17 +24,17 @@ const Theme = () => {
           {mode === "light" ? (
             <Image
               src="/assets/icons/sun.svg"
-              alt="Sun"
-              height={20}
+              alt="sun"
               width={20}
+              height={20}
               className="active-theme"
             />
           ) : (
             <Image
               src="/assets/icons/moon.svg"
               alt="moon"
-              height={20}
               width={20}
+              height={20}
               className="active-theme"
             />
           )}
